@@ -12,7 +12,7 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: Towelove/Towelove.github.io
-        TARGET_BRANCH: main #
+        TARGET_BRANCH: main
         BUILD_SCRIPT: npm install && npm run docs:build
         BUILD_DIR: docs/.vuepress/dist/
         CNAME: towelove.me
