@@ -14,7 +14,10 @@
 ​	我们都是技术热爱者，所以想着，其实这个项目如果只是给自己用的话，那自然非常简单就能实现我们想要的功能，但是我们希望这个项目也能让更多的人去以特殊的，自己的方式来表达自己对在乎的人的关心与爱，所以，我们不单单只是简单的打算设计一个小demo，而是希望这个项目能做到功能尽可能完善，同时我们会开源出来代码，因此，我们会尽可能的保证项目的开发符合（我们自认为的）规范。
 ​	同时项目会尽可能使用到比较主流的技术栈，来帮助一些新人Java朋友学习Java。
 ​	如果你也对这个项目有兴趣，可以添加我的联系方式来加入我们：
-​	Github地址：https://github.com/ZzloveLixh/Towelove
-​	CSDN地址：https://blog.csdn.net/Zhangsama1?type=blog
-​	B站地址：https://space.bilibili.com/141176332?spm_id_from=333.999.0.0
-​	联系方式：qczjhczs0114（本人） _Aeeee86（季）respect-bo（王） NULL_0x000（李）
+
+[Github地址](https://github.com/ZzloveLixh/Towelove)
+
+[CSDN](https://github.com/ZzloveLixh/Towelove)
+
+[​B站地址](https://github.com/ZzloveLixh/Towelove)
+​联系方式：qczjhczs0114（本人） _Aeeee86（季）respect-bo（王） NULL_0x000（李）
