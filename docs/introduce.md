@@ -6,7 +6,9 @@
 ​	比如我的微信绑定了我的QQ邮箱，因此我能在微信查看QQ邮箱收到的邮件。同时我也可以使用自己的QQ邮箱查看我的短信是否发送成功。
 情况如下：
 
-![https://cdn.nlark.com/yuque/0/2023/png/34806522/1677138449929-17a783a9-adff-4aa0-b8f1-05b30ea70c34.png](https://www.notion.so/image/https%3A%2F%2Fcdn.nlark.com%2Fyuque%2F0%2F2023%2Fpng%2F34806522%2F1677138449929-17a783a9-adff-4aa0-b8f1-05b30ea70c34.png?id=d65fa918-8139-41fa-8df4-54a3df6b0590&table=block&spaceId=b64c4d64-f403-4087-86e0-a1e8fdb8361f&width=2000&userId=c25e5a34-6e8a-4a43-ba9f-f420d2f8d2b7&cache=v2)
+![image-20230422173238467](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173238467.png)
+
+
 
 ​	对于管理端，管理端可以管理所有的用户自定义的消息，删除一些消息，同时如果某个用户的消息被删除了，那么对应的用户也需要接收到对应的提醒。因此用户端会在其邮箱中接收到对应的消息，邮箱的实现通过数据库实现。
 ​	请求的流程处理过程也按照这里的模块排序进行。

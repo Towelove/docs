@@ -17,7 +17,8 @@
 
 [Github地址](https://github.com/ZzloveLixh/Towelove)
 
-[CSDN](https://github.com/ZzloveLixh/Towelove)
+[CSDN](https://blog.csdn.net/Zhangsama1?type=bbs)
 
-[​B站地址](https://github.com/ZzloveLixh/Towelove)
-​联系方式：qczjhczs0114（本人） _Aeeee86（季）respect-bo（王） NULL_0x000（李）
+[B站地址](https://space.bilibili.com/141176332?spm_id_from=333.1007.0.0)
+
+联系方式：qczjhczs0114（本人） _Aeeee86（季）respect-bo（王） NULL_0x000（李）
