@@ -14,7 +14,7 @@
 ​	请求的流程处理过程也按照这里的模块排序进行。
 ​	如下是项目中各个服务的端口。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681023342902-c1a94a3f-0cd8-4ee3-b467-f788e850602d.png)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173500516.png)
 
 ## Nginx负载均衡与请求重定向模块：
 
@@ -38,7 +38,7 @@
 
 ​	 kaptcha是基于配置的方式来实现生成验证码的，通过该插件根据生成规则可以自动的将验证码字符串转变成图片流返回给请求发送端，同时可以通过配置文件方式，将生成验证码字符串与session关联。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681023552921-f09a29de-d58e-42a4-8086-ad97192e497c.png)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173512035.png)
 
 [kaptcha基本使用]: https://blog.51cto.com/u_14627411/3044720
 
@@ -193,7 +193,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ​	如果选择使用自己设定的验证码格式生成器，需要按照如下对配置文件进行配置
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681024168215-b759aeb5-a799-4837-96d7-767e02200915.png)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173532848.png)
 
 ​	然后我们就可以为前端的获取验证码的请求进行路径设置了，这里就不创建controller层在gateway这个项目中了，直接使用SpringBoot提供的RouterFunction。
 
@@ -201,19 +201,19 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ​	按照这种方式，我们就可以把验证码的返回流程简化如下
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681024309420-9b464854-27ef-4f85-89cc-1986bfc1ea83.png)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173537768.png)
 
 ﻿	然后我们使用apifox发送一个请求来获取验证码
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681024396660-40d9ef0f-6d34-4811-93ae-5acdfefd47b7.png)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173543190.png)
 
 ​	返回如下
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681024419065-c4018503-d204-4b25-a626-6f4e68ef0783.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173548710.png)
 
 ﻿	然后打开redis查看验证码答案，这里的uuid其实就是验证码的唯一标签。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681024464629-7b2a1ce5-5f76-4467-8e6e-426b2d37a023.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173602614.png)
 
 ﻿	之后，只需要对登录以及注册流程提供验证码服务即可，其他服务路径直接排除。
 
