@@ -4,12 +4,15 @@ module.exports = {
     themeConfig: {
       search: true,
       searchMaxSuggestions: 10,
+      //首页的右上角的导航栏
       nav: [
         { text: '主页', link: '/' },
         { text: '使用', link: '/useage.html' },
         { text: 'TODO', link: '/todo.html' },
         { text: 'Github', link: 'https://github.com/Towelove' },
+        { text: 'CSDN', link: 'https://blog.csdn.net/Zhangsama1?type=bbs' }
       ],
+      //对应的是侧边的导航栏
       sidebar: [
         {
           title: '梦开始的地方',   // 必要的
