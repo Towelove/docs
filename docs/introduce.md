@@ -120,7 +120,8 @@
 
 ```java
 package com.towelove.gateway.config;
- * KaptchaTextCreator类
+ 
+/* KaptchaTextCreator类
  * 验证码文本生成器
  */
 public class KaptchaTextCreator extends DefaultTextCreator
@@ -314,7 +315,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a1.png)
 
 ## 请求处理流程 
 
@@ -338,7 +339,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a2.png)
 
 ﻿
 
@@ -350,7 +351,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a3.png)
 
 ﻿
 
@@ -408,11 +409,9 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 9：允许用户上传照片，要么使用OSS服务，要么就是自己使用Minio，需要对照片的格式和大小作限定。（完成）
 
-10：有一个类似于QQ情侣空间的模块。
 
 ﻿
 
-![](./imgs/introduce/k2.png)
 
 ### ﻿用户消息模块 
 
@@ -420,7 +419,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a4.png)
 
 ﻿
 
@@ -438,7 +437,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a5.png)
 
 ﻿
 
@@ -452,7 +451,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a6.png)
 
 ﻿
 
@@ -460,13 +459,13 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a7.png)
 
 ﻿
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a8.png)
 
 ﻿
 
@@ -474,7 +473,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/a9.png)
 
 ﻿
 
@@ -516,25 +515,25 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x1.png)
 
 ﻿
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x2.png)
 
 ﻿
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x3.png)
 
 ﻿
 
 下面这个就是消息真正的发送逻辑。当我在XXL发送任务的时候，就会将这些封装好的完整的任务发送到RocketMQ中然后进行保存准备发送。
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x4.png)
 
 ﻿
 
@@ -544,7 +543,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 TODO：这个模块后期需要允许添加附件功能，并且需要了解如何发送html格式的邮件。
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x5.png)
 
 ﻿
 
@@ -554,13 +553,13 @@ TODO：这个模块后期需要允许添加附件功能，并且需要了解如�
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/k6.png)
 
 ﻿
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/k7.png)
 
 ﻿
 
@@ -572,12 +571,12 @@ TODO：这个模块后期需要允许添加附件功能，并且需要了解如�
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x8.png)
 
 ﻿
 
 ﻿
 
-![](./imgs/introduce/k2.png)
+![](./imgs/introduce/x9.png)
 
 ﻿
