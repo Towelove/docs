@@ -13,6 +13,12 @@ module.exports = {
       ],
       //对应的是侧边的导航栏
       sidebar: [
+        // {
+        //   title: '项目介绍',
+        //   path: '/introduce.html',
+        //   // children: [ /* ... */ ],
+        //   // initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+        // },
         {
           title: '产品文档',   // 必要的
           path: '/prd.html',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
@@ -28,12 +34,6 @@ module.exports = {
           // children: [
           //   '/'
           // ]
-        },
-        {
-          title: '项目介绍',
-          path: '/introduce.html',
-          // children: [ /* ... */ ],
-          // initialOpenGroupIndex: -1 // 可选的, 默认值是 0
         },
         {
           title: '项目技术栈及版本',   // 必要的
