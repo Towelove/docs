@@ -14,6 +14,14 @@ module.exports = {
       //对应的是侧边的导航栏
       sidebar: [
         {
+          title: '产品文档',   // 必要的
+          path: '/prd.html',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          sidebarDepth: 1,    // 可选的, 默认值是 1
+          // children: [
+          //   '/'
+          // ]
+        },
+        {
           title: '梦开始的地方',   // 必要的
           path: '/origin.html',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 1,    // 可选的, 默认值是 1

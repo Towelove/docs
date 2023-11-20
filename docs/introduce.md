@@ -6,15 +6,14 @@
 ​	比如我的微信绑定了我的QQ邮箱，因此我能在微信查看QQ邮箱收到的邮件。同时我也可以使用自己的QQ邮箱查看我的短信是否发送成功。
 情况如下：
 
-![image-20230422173238467](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173238467.png)
-
+![](./imgs/introduce/msgstyle.png)
 
 
 ​	对于管理端，管理端可以管理所有的用户自定义的消息，删除一些消息，同时如果某个用户的消息被删除了，那么对应的用户也需要接收到对应的提醒。因此用户端会在其邮箱中接收到对应的消息，邮箱的实现通过数据库实现。
 ​	请求的流程处理过程也按照这里的模块排序进行。
 ​	如下是项目中各个服务的端口。
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173500516.png)
+![](./imgs/introduce/coderun.png)
 
 ## Nginx负载均衡与请求重定向模块：
 
@@ -38,7 +37,7 @@
 
 ​	 kaptcha是基于配置的方式来实现生成验证码的，通过该插件根据生成规则可以自动的将验证码字符串转变成图片流返回给请求发送端，同时可以通过配置文件方式，将生成验证码字符串与session关联。
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173512035.png)
+![](./imgs/introduce/k0.png)
 
 [kaptcha基本使用]: https://blog.51cto.com/u_14627411/3044720
 
@@ -193,7 +192,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ​	如果选择使用自己设定的验证码格式生成器，需要按照如下对配置文件进行配置
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173532848.png)
+![](./imgs/introduce/k1.png)
 
 ​	然后我们就可以为前端的获取验证码的请求进行路径设置了，这里就不创建controller层在gateway这个项目中了，直接使用SpringBoot提供的RouterFunction。
 
@@ -201,19 +200,19 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ​	按照这种方式，我们就可以把验证码的返回流程简化如下
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173537768.png)
+![](./imgs/introduce/k2.png)
 
 ﻿	然后我们使用apifox发送一个请求来获取验证码
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173543190.png)
+![](./imgs/introduce/k3.png)
 
 ​	返回如下
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173548710.png)
+![](./imgs/introduce/k4.png)
 
 ﻿	然后打开redis查看验证码答案，这里的uuid其实就是验证码的唯一标签。
 
-![](C:\Users\46021\AppData\Roaming\Typora\typora-user-images\image-20230422173602614.png)
+![](./imgs/introduce/k5.png)
 
 ﻿	之后，只需要对登录以及注册流程提供验证码服务即可，其他服务路径直接排除。
 
@@ -223,19 +222,19 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681031471458-177250f7-4189-46b4-a256-9b6d6415715d.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k6.png)
 
 
 
 ​	如果验证码错误，那么返回验证码错误。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681025599449-900ea6e5-2f7a-4db4-86ad-bd9c2ea1c58d.png)
+![](./imgs/introduce/k7.png)
 
 ​	反之，验证码正确，则返回token。
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681031266639-53a6a1a8-4f30-49e6-b3e9-eaf1c5bbae8e.png)
+![](./imgs/introduce/k8.png)
 
 ﻿
 
@@ -243,7 +242,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681031498051-586a686b-c8c4-4016-8a97-5d306f49fa69.png)
+![](./imgs/introduce/k9.png)
 
 
 
@@ -253,7 +252,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032063371-b6a046cc-9f39-4303-8966-ee62ddc1598c.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k10.png)
 
 ﻿	到此位置，网关部分基本结束。
 
@@ -277,13 +276,13 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032492888-c9547864-8169-48c0-a716-fdae545cc618.png)
+![](./imgs/introduce/k11.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032526935-9d266756-cf3a-4fc0-a612-51ed5814123c.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k12.png)
 
 ﻿
 
@@ -291,7 +290,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032578451-153f40ba-f4c5-4f43-ac79-77649f4ac2c7.png)
+![](./imgs/introduce/k13.png)
 
 ﻿
 
@@ -299,7 +298,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032723450-243f6eb7-3df9-4c5f-96c3-d292edbd9493.png)
+![](./imgs/introduce/k14.png)
 
 ## Auth授权登录模块 
 
@@ -315,7 +314,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681032753608-e69664c2-ea0f-4551-83ec-f45364f988f4.png)
+![](./imgs/introduce/k2.png)
 
 ## 请求处理流程 
 
@@ -339,7 +338,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681103473468-ae1c224b-92e3-4d5a-90ca-76bd418cea77.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -351,7 +350,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681103949120-d4baa8d9-347a-44e5-8a7f-087ed0bc880d.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -413,7 +412,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![img](https://cdn.nlark.com/yuque/0/2023/jpeg/34806522/1682151516180-4c903bba-9808-49ae-9ff6-1cdf96514265.jpeg?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0%2Finterlace%2C1)
+![](./imgs/introduce/k2.png)
 
 ### ﻿用户消息模块 
 
@@ -421,7 +420,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1681999865005-d46d1ef8-480f-496c-b91b-fa57891c5df8.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -439,7 +438,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682000820568-7eee1a76-8cf4-4887-bf4c-3c7d992165d9.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -453,7 +452,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682001282945-3f4a3509-39e6-496d-8050-b60f635186f6.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -461,13 +460,13 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682067941895-5f6258d5-f531-4bad-82c3-391f218a54b2.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682067976520-55d36905-7d3f-4fd4-9025-89e7e882dc4b.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -475,7 +474,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682068017156-36e2a1fd-aef4-4b38-a9da-e6da16e85eda.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -517,25 +516,25 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682084580030-cd0ba7ba-79b5-4b44-ab1d-3f4cefe22c1e.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682068356447-c2fc6d24-6ad7-46fc-9b5f-95f6baf289f2.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682068406825-20e7bccd-78aa-417e-a4c0-919e5e7f6dd7.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 下面这个就是消息真正的发送逻辑。当我在XXL发送任务的时候，就会将这些封装好的完整的任务发送到RocketMQ中然后进行保存准备发送。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682083914829-a972d9e4-b8af-4e57-9094-db59ac6f4199.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -545,7 +544,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 TODO：这个模块后期需要允许添加附件功能，并且需要了解如何发送html格式的邮件。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1678188596397-165bb841-d6be-4916-85cf-643580b2e0c6.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -555,13 +554,13 @@ TODO：这个模块后期需要允许添加附件功能，并且需要了解如�
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682084998917-d8b03d6d-752b-44b1-8589-4f5a087dd387.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682084959301-6ab768bb-d80a-4f38-907c-5cbc9cc6316b.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
@@ -573,12 +572,12 @@ TODO：这个模块后期需要允许添加附件功能，并且需要了解如�
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682068963764-a0658c0d-b712-4cad-979f-14f882d1e0c9.png)
+![](./imgs/introduce/k2.png)
 
 ﻿
 
 ﻿
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/34806522/1682068980737-9acd6e4d-3f27-43d8-92ee-ca5c4099d5d1.png?x-oss-process=image%2Fresize%2Cw_1237%2Climit_0)
+![](./imgs/introduce/k2.png)
 
 ﻿
