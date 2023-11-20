@@ -1,4 +1,3 @@
-
 # 项目介绍
 
 ​	项目分为管理端和用户端。
@@ -15,14 +14,14 @@
 
 ![](./imgs/introduce/coderun.png)
 
-## Nginx负载均衡与请求重定向模块：
+## Nginx负载均衡与请求重定向模块
 
 ​	这个模块用于将前端的请求进行接收，并进行请求重定向或者负载均衡。
 ​	对于一些单纯只是访问静态页面的请求，我们直接使用Nginx中的缓存为其提供服务。
 ​	若其访问的是需要后端代码进行配合的项目，那么我们会将请求发送到Gateway网关中进行处理。
 ​	Nginx的端口默认监听80，我们的网关服务端口为8080。
 
-## Gateway网关模块：
+## Gateway网关模块
 
 ​	网关使用的是spring-gateway，其本质是一个过滤器链。
 ​	在当前模块，我们提供了验证码加载，限流，熔断，负载均衡，请求重定向，非法请求过滤，请求头信息存放等功能。
@@ -120,10 +119,7 @@
 
 ```java
 package com.towelove.gateway.config;
- 
-/* KaptchaTextCreator类
- * 验证码文本生成器
- */
+
 public class KaptchaTextCreator extends DefaultTextCreator
 {
     private static final String[] CNUMBERS = "0,1,2,3,4,5,6,7,8,9,10".split(",");
@@ -259,7 +255,7 @@ public class KaptchaTextCreator extends DefaultTextCreator
 
 
 
-## SpringSecurity鉴权模块:
+## SpringSecurity鉴权模块
 
 ​	可以这样子理解这个模块，我们知道如果是一个正常的项目，我们可以直接使用RESTFUL风格来设定请求的路径和参数，但是对于普通用户，他们肯定是不允许去查询其他用户的信息的，这种操作只允许管理员进行。
 
