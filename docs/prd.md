@@ -8,10 +8,11 @@
 - 项目发展良好，则可以考虑再项目中开展一些增值服务，比如高级定制、广告合作等。
 
 1.0项目原型图
-Towelove 1. 0版本
-http://love.np4.cn/
+
 [Towelove 1. 0版本](http://love.np4.cn/)
+
 2.0项目原型图
+
 ![](./imgs/prd/prodimg/prodimage1.png)
 # 功能设计
 
