@@ -1,22 +1,21 @@
 module.exports = {
-    title: 'Towelove',
+    title: 'ToWeLove',
     description: '双向的爱',
     themeConfig: {
       search: true,
       searchMaxSuggestions: 10,
       //首页的右上角的导航栏
       nav: [
-        { text: '主页', link: '/' },
-        { text: '使用', link: '/useage.html' },
         { text: 'CSDN', link: 'https://blog.csdn.net/Zhangsama1?type=bbs' },
-        { text: 'Github', link: 'https://github.com/Towelove' }
+        { text: 'Github', link: 'https://github.com/Towelove' },
+        { text: 'Bilibili', link: 'https://space.bilibili.com/141176332' },
       ],
       //对应的是侧边的导航栏
       sidebar: [
         {
           title: '产品文档',   // 必要的
           path: '/prd.html',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-          sidebarDepth: 1,    // 可选的, 默认值是 1
+          // sidebarDepth: 1,    // 可选的, 默认值是 1
           // children: [
           //   '/'
           // ]
@@ -32,6 +31,7 @@ module.exports = {
         {
           title: '项目介绍',
           path: '/introduce.html',
+          sidebarDepth: 1,    // 可选的, 默认值是 1
           // children: [ /* ... */ ],
           // initialOpenGroupIndex: -1 // 可选的, 默认值是 0
         },
