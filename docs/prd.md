@@ -15,6 +15,10 @@
 
 ![](./imgs/prd/prodimg/prodimage1.png)
 
+Logo
+
+![](./imgs/prd/logo/img.png)
+![](./imgs/prd/logo/img_1.png)
 
 ## UI设计
 
@@ -298,6 +302,10 @@ TimeLine也就是时间线，时间线的作用就是用来记录情侣之间在
 
 标记共同旅行或重要地点的地图。
 思考ing
+
+### 分享
+朋友叫我提供一个额外的分享功能
+可以考虑在点击分享的时候会生成项目的插画图
 
 ### 社区功能
 
