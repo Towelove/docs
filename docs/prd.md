@@ -25,7 +25,7 @@ Logo
 
 [Love调研问卷](https://www.wjx.cn/vm/exQiaef.aspx)
 
-![调查问卷](./imgs/prd/prodimg/调查问卷.jpg)
+![](./imgs/prd/prodimg/requestionnaire.jpg)
 
 
 ## UI设计
