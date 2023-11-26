@@ -21,10 +21,11 @@ Logo
 ![](./imgs/prd/logo/img_1.png)
 
 ## 用户调研
+链接图片二选一咯
 
 [Love调研问卷](https://www.wjx.cn/vm/exQiaef.aspx)
 
-![img_1.png](img_1.png)
+![调查问卷](./imgs/prd/prodimg/调查问卷.jpg)
 
 
 ## UI设计
